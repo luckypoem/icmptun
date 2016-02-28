@@ -7,8 +7,8 @@ This programs create linux tunnel network interface (using TUN kernel module). E
 
 ## Compiling and using
 
-You need libssl-dev, libnetfilter-queue-dev and libnetfilter-queue1 to be able to compile this programs. These names of packages is valid for Debian, it can be named differently in other distributions.
+You need libssl-dev, libnetfilter-queue-dev and libnetfilter-queue1 to be able to compile this programs. Those names of packages are valid for Debian, it can be named differently in other distributions.
 
 Before using, you must have kernel module tun loaded (modprobe tun). Programs can run in server or client mode (after make you should get icmptun_client and icmptun_server programs). In client mode, you have to specify IP of server. You don't need to specify that for server, server automatically learns IPs of clients. For both modes must also specify encryption key (its used for encrypting original packets). You can use any strings as encryption keys, SHA256 is then used for creating real encryption keys. 
 
-After starting program, it creates network interface. To use it, you should assing link adresses to that interface (on both client and server) and then you can use it (you can route throught it, for example you can change default gateway to adress of the other side of the tunnel).
+After starting program, it creates network interface. To use it, you should assign link adresses to that interface (on both client and server) and then you can use it (you can route throught it, for example you can change default gateway to adress of the other side of the tunnel).
